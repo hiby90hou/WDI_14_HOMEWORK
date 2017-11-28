@@ -9,6 +9,9 @@ console.log("currentYear = " + currentYear);
 
 var birthYear = prompt("What is your possible birth year?");
 
-console.log("They are either " + (currentYear-birthYear-1) + " or " + (currentYear-birthYear));
-
-document.getElementById("result").innerHTML = "You are either " + (currentYear-birthYear-1) + " or " + (currentYear-birthYear);
+if(birthYear > currentYear){
+	alert('Please input a valid birth year!')
+}else if(birthYear == currentYear){
+document.getElementById("result").innerHTML = "You are 0 year old";	
+}else{
+document.getElementById("result").innerHTML = "You are either " + (currentYear-birthYear-1) + " or " + (currentYear-birthYear);}
