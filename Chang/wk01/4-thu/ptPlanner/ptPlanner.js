@@ -1,26 +1,40 @@
 var startPoint = 'Prahran';
 var endPoint = 'Hawthorn';
 
+//make an array contain all of the station name
+var totalArr = [];
+
 console.log('startPoint'+startPoint);
 console.log('endPoint'+endPoint);
-// function planner(startPoint, endPoint){
+
   var trainMap = {
     AlameinLine : [ 'Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
     GlenWaverlyLine : ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong','Tooronga'],
     SandringhamLine : ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
   }
 
+for(index in trainMap){
+  totalArr=totalArr.concat(trainMap[index]);
+}
+console.log(totalArr);
+
+startPoint = prompt("please input startPoint");
+endPoint = prompt("please input endPoint");
+
+while(totalArr.toString().indexOf(startPoint)<0 || totalArr.toString().indexOf(endPoint)<0 ){
+  alert("Input error!Please try again")
+  startPoint = prompt("please input startPoint");
+  endPoint = prompt("please input endPoint");
+
+}
+
+
+
 
   // find out the intersection
   var intersectionArr = [];
 
-  //make an array contain all of the station name
-  var totalArr = []
 
-  for(index in trainMap){
-    totalArr=totalArr.concat(trainMap[index]);
-  }
-  console.log(totalArr);
 
   //find out the repeat station
   var flag=0;
