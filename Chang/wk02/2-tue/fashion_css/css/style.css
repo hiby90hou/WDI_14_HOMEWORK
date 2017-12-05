@@ -1,0 +1,175 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+header{
+	
+	margin: 53px auto 0 auto;
+}
+header h1, header h2{
+	display: inline-block;
+	font-weight: 200;
+}
+
+header h1{
+	color: #DD0505;
+	font-size: 55px;
+}
+header h2{
+	color: #a98f8f;
+	font-size: 30px;
+	margin-left: 10px;
+}
+header nav{
+	margin-top: 9px;
+}
+header nav ul{
+	overflow: hidden;
+}
+
+header nav li{
+	background-color: black;
+	border: solid 1px white;
+	width: 16.6%;
+	height: 58px;
+	float: left;
+	color: #FFD79F;
+	list-style-type: none;
+	text-align: center;
+	line-height: 56px;
+	font-size: 22px;
+}
+.bigContainer{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.container{
+}
+aside{
+	float: right;
+	width: 280px;
+	margin-top: 80px;
+
+}
+aside h4{
+	color:#bbb;
+	font-size: 22px;
+	margin: 20px 0;	
+}
+aside img{
+	width: 100%;
+	height: auto;
+	margin: 32px 0;
+}
+aside .smallContainer{
+	border-top: solid 1px #ccc;
+	margin-bottom: 30px;
+	overflow: hidden;
+
+}
+
+aside .smallContainer:first-child{
+	border-top: solid 0px #ccc;
+}
+
+aside .smallContainer ul{
+	overflow: hidden;
+}
+aside .smallContainer li{
+	color:#ccc;
+	margin-left: 37px;
+	margin-bottom: 5px;
+}
+
+aside .smallContainer a{
+	display: block;
+	float: right;
+	right: 0;
+	color: red;
+	font-size: 17px;
+	font-weight: 800;
+}
+aside .smallContainer span{
+	color:red;
+}
+main{
+	margin-right: 320px;
+}
+
+section span{
+	font-size: 20px;
+	color: red;
+	font-weight: 800;
+	float: right;
+	display: block;
+	height: 70px;
+	line-height: 70px;
+}
+
+section .dateName{
+	display: block;
+	color: #D2C1BB;
+	float: none;
+	line-height: 22px;
+	height: 22px;
+	font-size: 22px;
+	margin-top: 50px;
+	margin-bottom: 18px;
+}
+
+section {
+	overflow: hidden;
+	border-bottom: solid 1px #ccc;
+}
+
+section h3{
+	font-size: 32px;
+
+}
+
+section img{
+	margin-top: 10px;
+	margin-bottom: 27px;
+	width: 100%;
+}
+
+article .capLetter{
+	float: left;
+	font-size: 80px;
+	line-height: 80px;
+	color: #DDDDDD;
+	font-weight: 400;
+	margin-right: 10px;
+}
+
+article{
+	font-size: 15px;
+	line-height: 22px;
+	
+}
+footer nav{
+	margin: 45px 0 30px 0;
+}
+footer nav ul{
+	overflow: hidden;
+}
+
+footer nav li{
+	float: left;
+	list-style-type: none;
+	padding: 0 10px;
+	border-right: solid 1px #ccc;
+	color:red;
+}
+footer nav li:first-child{
+	padding-left: 0;
+}
+footer nav li:last-child{
+	border-right: solid 0px #ccc;
+}
+
+footer p{
+	margin-bottom: 120px;
+}
