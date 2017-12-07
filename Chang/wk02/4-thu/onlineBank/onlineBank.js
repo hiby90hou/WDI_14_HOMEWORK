@@ -36,28 +36,32 @@ function withdraw(accountOrder,showing,input){
 	}
 
 	// if withdraw from checking account - overdraft protection
-	else if (input.value && accountOrder==1 && result[0]+result[1]>=inputLocal) {
-		var smallWithdraw = inputLocal-result[1];
+	else if (input.value && result[0]+result[1]>=inputLocal) {
+		var smallWithdraw = inputLocal-result[accountOrder];
 		
 		//set checking to 0
-		result[1] = 0;
+		result[accountOrder] = 0;
 		showing.textContent = "$00.00";
 		if(input.value){
 			input.value = null;
 		}
-		withdraw(0,saving,smallWithdraw);
+		if(accountOrder==1){
+			withdraw(0,saving,smallWithdraw);
+		}else{
+			withdraw(1,checking,smallWithdraw);
+		}
 	}
 	// if withdraw from saving account - overdraft protection
-	else if (input.value && accountOrder==0 && result[0]+result[1]>=inputLocal) {
-		var smallWithdraw = inputLocal-result[0];
+	// else if (input.value && accountOrder==0 && result[0]+result[1]>=inputLocal) {
+	// 	var smallWithdraw = inputLocal-result[0];
 		
-		result[0] = 0;
-		showing.textContent = "$00.00";
-		if(input.value){
-			input.value = null;
-		}
-		withdraw(1,checking,smallWithdraw);
-	}
+	// 	result[0] = 0;
+	// 	showing.textContent = "$00.00";
+	// 	if(input.value){
+	// 		input.value = null;
+	// 	}
+	// 	withdraw(1,checking,smallWithdraw);
+	// }
 	else{
 		alert("Error!");
 		input.value = null;
