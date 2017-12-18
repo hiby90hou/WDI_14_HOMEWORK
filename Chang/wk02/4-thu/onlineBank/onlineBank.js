@@ -32,7 +32,6 @@ function withdraw(accountOrder,showing,input){
 		if(input.value){
 			input.value = null;
 		}
-
 	}
 
 	// if withdraw from checking account - overdraft protection
@@ -51,17 +50,6 @@ function withdraw(accountOrder,showing,input){
 			withdraw(1,checking,smallWithdraw);
 		}
 	}
-	// if withdraw from saving account - overdraft protection
-	// else if (input.value && accountOrder==0 && result[0]+result[1]>=inputLocal) {
-	// 	var smallWithdraw = inputLocal-result[0];
-		
-	// 	result[0] = 0;
-	// 	showing.textContent = "$00.00";
-	// 	if(input.value){
-	// 		input.value = null;
-	// 	}
-	// 	withdraw(1,checking,smallWithdraw);
-	// }
 	else{
 		alert("Error!");
 		input.value = null;
