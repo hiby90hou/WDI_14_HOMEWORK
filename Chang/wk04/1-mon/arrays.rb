@@ -18,9 +18,9 @@ puts "newArr=#{newArr}"
 # remove weekend days
 newArr.slice!(1,1)
 
-puts "newArr=#{newArr}"
+puts "after remove weekend days newArr=#{newArr}"
 
 newArr[0].sort!
-puts "newArr=#{newArr}"
+puts "after sort newArr=#{newArr}"
 
 # binding.pry
