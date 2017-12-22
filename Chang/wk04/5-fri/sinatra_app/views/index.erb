@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+	<div class="wrap">
+		<!-- <div>show temp here</div> -->
+		<ul>
+			<li><a href="./?city=Adelaide&country=Australia">Adelaide</a></li>
+			<li><a href="./?city=Melbourne&country=Australia">Melbourne</a></li>
+			<li><a href="./?city=Sydney&country=Australia">Sydney</a></li>
+		</ul>
+
+		<% if @res %>
+ 			<div><%= @res.title %></div>
+			<div><%= @res.condition.temp %>&deg;C</div>
+			<div><%= @res.condition.text %></div>
+			<div>
+				<img src="<%= @res.image.url %>">
+			</div>
+		<% end %>
+	</div>
+</body>
+</html>
