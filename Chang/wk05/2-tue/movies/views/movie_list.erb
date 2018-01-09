@@ -1,0 +1,40 @@
+<div class="bigContainer">
+	<aside>
+		<h3>Related movies</h3>
+		<div>
+			<ul>
+			  <% @list.each_with_index { |movie,index| %> 
+				<li>
+					<h2><%= "movie #{index+1}" %></h2>
+					<a href="/movie?movie_id=<%= movie["imdbID"] %>">
+						<ul>
+							<li><img src=<%= "#{movie['Poster']}" %>></li>
+							<li>Title: <%= "#{movie["Title"]}" %></li>
+							<li>Year: <%= "#{movie["Year"]}" %></li>
+							<li>Type: <%= "#{movie["Type"]}" %></li>
+						</ul>
+					</a>
+				</li>
+				<% } %>
+<!-- 			<img id="poster" src=<%#= @list['Poster'] %>>	 -->
+		</ul>
+		</div>
+	</aside>
+	<main>
+		<dir>
+			<img id="poster" src=<%= @result['Poster'] %>>	
+		</dir>
+		<div id="title">Title: <%= @result['Title'] %></div>
+		<div>Year: <%= @result['Year'] %></div>
+		<div>Rated: <%= @result['Rated'] %></div>
+		<div>Released: <%= @result['Released'] %></div>
+		<div>Runtime: <%= @result['Runtime'] %></div>
+		<div>Genre: <%= @result['Genre'] %></div>
+		<div>Director: <%= @result['Director'] %></div>
+		<div>Writer: <%= @result['Writer'] %></div>
+		<div>Actors: <%= @result['Actors'] %></div>
+		<div>Language: <%= @result['Language'] %></div>
+		<div>Plot: <%= @result['Plot'] %></div>
+		<div>Country: <%= @result['Country'] %></div>
+	</main>
+</div>
