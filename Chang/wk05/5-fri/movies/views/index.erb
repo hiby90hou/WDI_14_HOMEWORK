@@ -1,0 +1,18 @@
+<div class="bigContainer">
+<h1>Check movies</h1>
+<form action="/movie_list_input?">
+	<input type="text" name="movie_list" placeholder="please input your movie name">
+	<button>enter</button>
+</form>
+
+	<ul class="history">
+		<h2>Search history</h2>
+		<% @history_info.each { |movie| %>
+		<li>
+			<a href="/movie?movie_id=<%= movie["imdbid"] %>">
+				<img src=<%= movie['image_url'] %>>
+				<!-- <p><%#= movie['name'] %></p> -->
+			</a>
+		</li>
+		<% } %>
+</div>

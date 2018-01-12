@@ -1,0 +1,13 @@
+CREATE TABLE movie (
+	id SERIAL PRIMARY KEY,
+	imdbID VARCHAR(255),
+	name VARCHAR(255),
+	image_url VARCHAR(1024),
+	Ratings VARCHAR(255),
+	movie_type VARCHAR(255),
+	DVD VARCHAR(255),
+	Website VARCHAR(1024),
+	Runtime VARCHAR(255),
+	Language VARCHAR(255),
+	Country VARCHAR(255)
+);
