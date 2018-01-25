@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
     <title>Hogwarts</title>
@@ -9,10 +9,11 @@
   <body>
     <nav>
       <h1>Welcome to Hogwarts!</h1>
-      <h2><%= link_to "View Houses", "/house" %> | <%= link_to "View Students", "/student" %> | <%= link_to "Enroll", "/student" %></h2>
+      <h2><%= link_to "View Houses", "/" %> | <%= link_to "View Students", "/students" %> | <%= link_to "Enroll", "/students/new" %></h2>
     </nav>
-
-    <% yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
   </body>
 </html>
