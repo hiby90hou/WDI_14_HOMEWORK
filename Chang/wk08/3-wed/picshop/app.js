@@ -5,8 +5,6 @@ var inputBox = document.querySelector(".inputBox");
 var clickCounter = 0;
 
 	function fetchData(){
-		console.log('click')
-		console.log('http://api.giphy.com/v1/gifs/search?q='+inputBox.value+'&api_key=' + config.GIPHY_API + '&limit=10&offset='+clickCounter*10)
 		fetch('http://api.giphy.com/v1/gifs/search?q='+inputBox.value+'&api_key=' + config.GIPHY_API + '&limit=10&offset='+clickCounter*10)
 	  .then(function(response) {
 	    return response.text()
