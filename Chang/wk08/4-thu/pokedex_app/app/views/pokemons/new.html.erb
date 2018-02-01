@@ -1,0 +1,12 @@
+<h1>new pokemen</h1>
+<form action="/pokemons" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label>Species:</label>
+	<input type="text" name="species">
+	<label>nickname:</label>
+	<input type="text" name="nickname">
+	<label>level:</label>
+	<input type="text" name="level">
+	<button>Enter</button>
+	
+</form>

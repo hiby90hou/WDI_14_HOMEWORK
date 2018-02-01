@@ -1,0 +1,15 @@
+<h1>pokemen list</h1>
+<a href="/pokemons/new">catch a new pokemen</a>
+<div class="container">
+	<ul>
+		<% @pokemon_list.each do |pokemen| %>
+			<li>
+				<h3><%= pokemen.species %></h3>
+				<h4><%= pokemen.nickname %></h4>
+				<p><%= pokemen.level %></p>
+					
+			</li>
+		<% end %>
+	</ul>
+	
+</div>
