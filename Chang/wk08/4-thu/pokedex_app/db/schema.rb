@@ -10,15 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201053133) do
+ActiveRecord::Schema.define(version: 20180201125122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.integer "rarity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pokemons", force: :cascade do |t|
     t.string "species"
     t.string "nickname"
     t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string "name"
+    t.string "prototype"
+    t.integer "evolute_level"
+    t.string "img_url"
+    t.integer "rarity"
+    t.integer "growth_rate"
+    t.integer "min_level"
+    t.integer "max_level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
