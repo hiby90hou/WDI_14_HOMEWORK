@@ -11,5 +11,5 @@ arr.forEach(function(elem,index){
 	}
 })
 
-// console.log(resultArr);
+console.log(resultArr);
 console.log(result);
