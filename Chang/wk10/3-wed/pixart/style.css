@@ -1,0 +1,18 @@
+.brush,.stampBrush{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+}
+.square{
+	width: 20px;
+	height: 20px;
+	background-color: pink;
+	display: inline-block;
+	margin: 0 5px;
+	background-image: url();
+	background-size: cover;
+}
+img{
+	width: 20px;
+	height: 20px;
+}
