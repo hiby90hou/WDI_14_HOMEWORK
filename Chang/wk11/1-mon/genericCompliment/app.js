@@ -5,12 +5,18 @@ const PORT = 8080;
 app.set('views', './views');
 app.set('view engine','ejs');
 
-function getColor(){
+function getColor(isHaofu){
+	if(isHaofu){
+		return "#ff91cd"
+	}
 	var colors = ["#FFBF00", "#0080FF", "#01DF3A", "#FF0080"]
 	return colors[Math.floor(Math.random() * colors.length)]
 }
 
-function getGreeting(){
+function getGreeting(isHaofu){
+	if(isHaofu){
+		return "I love you!"
+	}
 	var compliments = [
   "Your instructors love you",
   "High five = ^5",
@@ -22,8 +28,9 @@ function getGreeting(){
 }
 
 app.get('/:tagId',function(req, res){
-	var sayHi = getGreeting()
-	var color = getColor()
+	var isHaofu = (req.params.tagId.toLowerCase() == 'haofu')
+	var sayHi = getGreeting(isHaofu)
+	var color = getColor(isHaofu)
 	var name = req.params.tagId
 
 	res.render('name', {sayHi:sayHi, color:color, name:name})
